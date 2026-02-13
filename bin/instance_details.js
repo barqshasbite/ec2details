@@ -103,14 +103,7 @@ async function getProducts () {
 }
 
 async function getTerms () {
-  await downloadFile()
-  const termsRaw = JSON.parse(fs.readFileSync(termsFile))
-  const termsObj = {}
-  for (const term of termsRaw) {
-    const key = Object.keys(term)[0]
-    termsObj[term[key].sku] = term[key]
-  }
-  return termsObj
+  return {};
 }
 
 async function getInstanceDetails () {
